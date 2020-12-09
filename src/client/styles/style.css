@@ -37,13 +37,17 @@ nav {
   margin: 7px;
 }
 
+.socialContacts li:hover img {
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(208.8deg) brightness(1);
+}
+
 .socialContacts img {
   width: 100%;
   height: 100%;
   color: #eee;
 }
 
-main {
+.container {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -53,9 +57,10 @@ main {
   width: 40%;
   height: 100%;
   background-color: #6357ff;
-  padding: 120px 60px 60px 60px;
+  padding: 120px 80px 60px 80px;
 }
 
+.aboutContent,
 .initialContent h1,
 p,
 span {
@@ -65,8 +70,9 @@ span {
 
 .initialContent h1 {
   font-size: 5rem;
-  font-weight: 400;
+  font-weight: bold;
   margin: 20px 0 20px 0;
+  line-height: 45px;
 }
 
 .initialContent span {
@@ -97,7 +103,7 @@ span {
   border: none;
   outline: none;
   cursor: pointer;
-  color: #2e3131;
+  color: #1d1d1b;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.2rem;
@@ -107,6 +113,101 @@ span {
 
 .btn:hover {
   transition: ease-in 0.3s;
-  background-color: #2e3131;
+  background-color: #1d1d1b;
   color: #eee;
+}
+
+.aboutContent {
+  width: 50%;
+  height: 100%;
+  background-color: #1d1d1b;
+  padding: 120px 80px 60px 80px;
+}
+
+.aboutContent span,
+h1 {
+  color: #6458ff;
+}
+
+.aboutContent h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  margin: 20px 0 20px 0;
+}
+
+.aboutContent span {
+  font-size: 1.4rem;
+}
+
+.aboutContent p {
+  max-width: 350px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.aboutImage {
+  width: 50%;
+  height: 100%;
+}
+
+.aboutImage {
+  background-color: #eee;
+  position: relative;
+}
+
+.imageContainer {
+  display: block;
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  background: blue;
+  bottom: 70px;
+  left: -70px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0.5);
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 910px) {
+  .container {
+    display: block;
+    height: auto;
+  }
+
+  .initialContent,
+  .backgroundImage,
+  .aboutContent,
+  .aboutImage {
+    width: 100%;
+  }
+
+  .backgroundImage img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .imageContainer {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageContainer img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
 }
